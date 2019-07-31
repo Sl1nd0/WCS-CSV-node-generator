@@ -1,0 +1,20 @@
+function CheckForDuplicateOrder(CartonArr)
+{
+	var Arr = [];
+
+	var ndx = 2;
+	while(ndx < CartonArr.length)
+	{
+		Arr.push(CartonArr[ndx]);
+		ndx++;
+	}	
+
+	console.log('My List: ' + Arr);
+	now = new Date();
+
+    HostIntTriggerFromArray(Arr, 0, function()
+    {
+        stream.close();
+        console.log(moment(new Date()).format('YYYY-MM-DD HH:mm') + ' Done');
+    });
+}
